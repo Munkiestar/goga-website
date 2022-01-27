@@ -1,11 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Products.scss";
+import { products, categories } from "../../seeds/products";
+import ProductCard from "./productCard/ProductCard";
 
-function Products(props) {
+function Products() {
+  const [category, setCategory] = useState("sve");
+
   return (
-    <div>
-      <h1>Galery</h1>
-    </div>
+    <main>
+      <h1>Galerija proizvoda</h1>
+
+      {categories.map((cat) => (
+        <button
+          className="btn"
+          key={cat.value}
+          onClick={() => setCategory(cat.name)}
+        >
+          {cat.value}
+        </button>
+      ))}
+      <section className="products">
+        {products
+          .filter((prod) => {
+            if (prod.category === category) {
+              return prod;
+            } else if (category === "sve") {
+              return prod;
+            }
+          })
+          .map((product) => (
+            <ProductCard product={product} key={product.id} />
+          ))}
+      </section>
+    </main>
   );
 }
 

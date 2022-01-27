@@ -15,28 +15,17 @@ function App() {
         <Navbar />
       </section>
 
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/gallery" element={<Products />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="*" element={<Error />} />
-      </Routes>
+      <section className="wrapper">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/o-nama" element={<About />} />
+          <Route path="/galerija" element={<Products />} />
+          <Route path="/kontakt" element={<Contact />} />
+          <Route path="*" element={<Error />} />
+        </Routes>
+      </section>
     </div>
   );
 }
 
 export default App;
-
-/*
-        1. Oslikane daskice
-        2. Likovi
-        3. Igrala i igracke
-        4. Mjerilice visine
-        5. 3D okviri
-        6. Razno
-        Gordana
-        Gordana Bulović
-        Mislim da bi ti bile kategorije
-
-*/
