@@ -2,8 +2,8 @@ import React from "react";
 import "./Navbar.scss";
 
 import { Link } from "react-router-dom";
-
 import logoImg from "../../assets/logo.jpg";
+
 function Navbar(props) {
   return (
     <nav className="nav">
@@ -13,24 +13,16 @@ function Navbar(props) {
       <section className="nav__links">
         <ul className="nav__items">
           <li className="nav__items-item">
-            <Link to="/" exact activeClassName="selected">
-              Home
-            </Link>
+            <Link to="/">Pocetna</Link>
           </li>
           <li className="nav__items-item">
-            <Link to="/about" exact activeClassName="selected">
-              About
-            </Link>
+            <Link to="/o-nama">O nama</Link>
           </li>
           <li className="nav__items-item">
-            <Link to="/gallery" exact activeClassName="selected">
-              Gallery
-            </Link>
+            <Link to="/galerija">Katalog</Link>
           </li>
           <li className="nav__items-item">
-            <Link to="/contact" exact activeClassName="selected">
-              Contact
-            </Link>
+            <Link to="/kontakt">Kontakt</Link>
           </li>
           <li className="nav__items-item">
             <br />
