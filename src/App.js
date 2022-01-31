@@ -1,12 +1,15 @@
+import React, { Suspense } from "react";
 import "./App.scss";
 import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/navbar/Navbar";
-import Home from "./pages/home/Home";
-import About from "./pages/about/About";
-import Error from "./pages/error/Error";
-import Products from "./pages/products/Products";
-import Contact from "./pages/contact/Contact";
+
+// lazy loading
+const Home = React.lazy(() => import("../src/pages/home/Home"));
+const About = React.lazy(() => import("../src/pages/about/About"));
+const Products = React.lazy(() => import("../src/pages/products/Products"));
+const Contact = React.lazy(() => import("../src/pages/contact/Contact"));
+const Error = React.lazy(() => import("../src/pages/error/Error"));
 
 function App() {
   return (
@@ -16,13 +19,15 @@ function App() {
       </section>
 
       <section className="wrapper">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/o-nama" element={<About />} />
-          <Route path="/galerija" element={<Products />} />
-          <Route path="/kontakt" element={<Contact />} />
-          <Route path="*" element={<Error />} />
-        </Routes>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/o-nama" element={<About />} />
+            <Route path="/galerija" element={<Products />} />
+            <Route path="/kontakt" element={<Contact />} />
+            <Route path="*" element={<Error />} />
+          </Routes>
+        </Suspense>
       </section>
     </div>
   );
