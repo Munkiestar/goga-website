@@ -15,12 +15,14 @@
 
 .container {
   //max-width: 100%;
-  background-color: var(--bcg-color-navbar);
+  //background-color: var(--bcg-color-navbar);
+  height: auto;
 }
 
 .wrapper {
   max-width: 80rem;
   margin: 3rem auto 3rem;
+  background-color: transparent;
 }
 
 .light-mode {
@@ -87,6 +89,27 @@ h1 {
 
   &:active:after {
     opacity: 1;
+  }
+
+  input,
+  label,
+  textarea {
+    font-family: "Lato", sans-serif;
+  }
+  ::-webkit-input-placeholder {
+    font-family: "Lato", sans-serif;
+  }
+  :-moz-placeholder {
+    font-family: "Lato", sans-serif;
+  }
+  ::-moz-placeholder {
+    font-family: "Lato", sans-serif;
+  }
+  :-ms-input-placeholder {
+    font-family: "Lato", sans-serif;
+  }
+  .textarea::-moz-placeholder {
+    font-family: "Lato", sans-serif;
   }
 
   @media (min-width: 768px) {
