@@ -4,7 +4,7 @@ import CloseRoundedIcon from "@material-ui/icons/CloseRounded";
 
 import { createPortal } from "react-dom";
 
-function Modal({ src, alt, open, onClick, refBtn }) {
+function Modal({ src, alt, open, onClick }) {
   if (!open) return null;
 
   return createPortal(
