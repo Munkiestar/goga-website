@@ -1,3 +1,11 @@
+.btn__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 1rem 0 4rem;
+  flex-wrap: wrap;
+}
+
 .products {
   width: 100%;
   //display: grid;

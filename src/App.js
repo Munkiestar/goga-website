@@ -3,6 +3,7 @@ import "./App.scss";
 import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/navbar/Navbar";
+import Loader from "./components/loader/loader";
 
 // lazy loading
 const Home = React.lazy(() => import("../src/pages/home/Home"));
@@ -15,11 +16,13 @@ function App() {
   return (
     <div className="app light-mode">
       <section className="container">
-        <Navbar />
+        <Suspense fallback={<Loader />}>
+          <Navbar />
+        </Suspense>
       </section>
 
       <section className="wrapper">
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loader />}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/o-nama" element={<About />} />
