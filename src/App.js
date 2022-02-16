@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Navbar from "./components/navbar/Navbar";
 import Loader from "./components/loader/loader";
+import Footer from "./components/footer/Footer";
 
 // lazy loading
 const Home = React.lazy(() => import("../src/pages/home/Home"));
@@ -32,6 +33,7 @@ function App() {
           </Routes>
         </Suspense>
       </section>
+      <Footer />
     </div>
   );
 }

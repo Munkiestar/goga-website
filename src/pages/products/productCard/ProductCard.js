@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./ProductCard.scss";
 import Modal from "../../../components/modal/Modal";
-import ScrollToTop from "../../../helpers";
+import { ScrollToTop } from "../../../helpers";
 
 function ProductCard({ product }) {
   const { image, title, description, colors, size } = product;
