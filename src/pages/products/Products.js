@@ -10,15 +10,17 @@ function Products() {
     <main>
       <h1>Galerija proizvoda</h1>
 
-      {categories.map((cat) => (
-        <button
-          className="btn"
-          key={cat.value}
-          onClick={() => setCategory(cat.name)}
-        >
-          {cat.value}
-        </button>
-      ))}
+      <section className="btn__wrapper">
+        {categories.map((cat) => (
+          <button
+            className="btn"
+            key={cat.value}
+            onClick={() => setCategory(cat.name)}
+          >
+            {cat.value}
+          </button>
+        ))}
+      </section>
       <section className="products">
         {products
           .filter((prod) => {
