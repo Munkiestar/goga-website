@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./ProductCard.scss";
 import Modal from "../../../components/modal/Modal";
-import ScrollToTop from "../../../helpers";
+import { ScrollToTop } from "../../../helpers";
 
 function ProductCard({ product }) {
   const { image, title, description, colors, size } = product;
@@ -41,9 +41,11 @@ function ProductCard({ product }) {
           <Link to="/kontakt" onClick={ScrollToTop}>
             <button className="btn">Posalji upit</button>
           </Link>
-          <h3>{description}</h3>
-          <h4>{colors}</h4>
-          <p>{size}</p>
+          <div dangerouslySetInnerHTML={{ __html: description }} />
+          <div dangerouslySetInnerHTML={{ __html: size }} />
+          {/*<h3>{description}</h3>*/}
+          {/*<h4>{colors}</h4>*/}
+          {/*<p>{size}</p>*/}
         </div>
       </div>
       {isOpen && (

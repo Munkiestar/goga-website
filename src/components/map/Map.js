@@ -23,7 +23,7 @@ function Map() {
           <strong>Ul. Josipa Broza, 40000, Ivanovec</strong>
         </p>
         <p>
-          <strong>Narudžbe:</strong> &nbsp;+385 99 802 0736
+          <strong>Narudžbe:</strong> &nbsp;+385 91 528 61 42
         </p>
         <p>
           <strong>Email:</strong> &nbsp;lovebygoga@gmail.com

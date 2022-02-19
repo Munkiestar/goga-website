@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 // on route change always show top
-function ScrollToTop() {
+const ScrollToTop = () => {
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -10,6 +10,11 @@ function ScrollToTop() {
   }, [pathname]);
 
   return null;
-}
+};
 
-export default ScrollToTop;
+const getYear = () => {
+  const date = new Date();
+  return date.getFullYear();
+};
+
+export { ScrollToTop, getYear };
