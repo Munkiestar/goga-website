@@ -17,9 +17,7 @@ function App() {
   return (
     <div className="app light-mode">
       <section className="container">
-        <Suspense fallback={<Loader />}>
-          <Navbar />
-        </Suspense>
+        <Navbar />
       </section>
 
       <section className="wrapper">
