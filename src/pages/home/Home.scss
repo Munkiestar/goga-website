@@ -3,78 +3,40 @@
   max-height: 56.5rem;
   width: 100%;
   overflow: hidden;
-  //width: 100%;
-  //height: 60px;
-  //overflow: hidden;
-
-  //top: 67px;
-  //width: 100%;
-  //height: 93vh;
-  //overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   img {
-    //position: static;
-    //height: 100%;
-    //width: 100%;
-    //object-fit: cover;
-
-    /* druga opcija*/
-
-    opacity: 0.5;
-    position: relative;
-    //height: 90vh;
+    height: 100%;
     width: 100%;
     margin: 0;
-    object-fit: cover;
-    //
-    //&::after {
-    //  position: absolute;
-    //  content: "";
-    //  top: 0;
-    //  left: 0;
-    //  right: 0;
-    //  bottom: 0;
-    //  background: rgba(0, 0, 0, 0.2);
-    //  z-index: 200;
-    //}
+    object-fit: contain;
   }
 
-  &__main {
-    background: #000;
-    //max-width: 80rem;
-    width: 100%;
-    height: 100%;
+  &__main-content {
+    position: absolute;
+    font-family: inherit;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    position: absolute;
-    //top: 0;
-    //left: 0;
-    //right: 0;
-    //bottom: -1px;
+    justify-content: center;
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65));
+    color: #fff;
 
-    &-content {
-      font-family: inherit;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin: auto;
-      padding: 2rem;
-      text-align: center;
-      height: 60%;
-      //z-index: 100;
-      color: #fff;
+    h1 {
+      font-size: 6rem;
+      letter-spacing: 2px;
+    }
 
-      h1 {
-        font-size: 6rem;
-        letter-spacing: 2px;
-      }
-
-      p {
-        margin-top: 2rem;
-        font-size: 1.6rem;
-      }
+    p {
+      margin-top: 2rem;
+      font-size: 1.6rem;
     }
   }
 }
