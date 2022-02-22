@@ -1,35 +1,68 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.scss";
 
 import { Link } from "react-router-dom";
 import logoImg from "../../assets/logo.jpg";
+import MenuIcon from "@material-ui/icons/Menu";
+import CloseIcon from "@material-ui/icons/Close";
 
 function Navbar(props) {
+  const [isOpen, setIsOpen] = useState(false);
+  const [width, setWidth] = useState(window.innerWidth);
+
+  // useEffect(() => {
+  //   const updateWindowDimensions = () => {
+  //     setWidth(window.innerWidth);
+  //   };
+  //   window.addEventListener("resize", updateWindowDimensions);
+  //   return () => window.removeEventListener("resize", updateWindowDimensions);
+  // }, []);
+
+  const handleToggleBtn = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <nav className="nav">
-      <section className="nav__logo">
-        <img src={logoImg} alt="avatar-img" />
-      </section>
-      <section className="nav__links">
-        <ul className="nav__items">
-          <li className="nav__items-item">
-            <Link to="/">Pocetna</Link>
-          </li>
-          <li className="nav__items-item">
-            <Link to="/o-nama">O nama</Link>
-          </li>
-          <li className="nav__items-item">
-            <Link to="/galerija">Katalog</Link>
-          </li>
-          <li className="nav__items-item">
-            <Link to="/kontakt">Kontakt</Link>
-          </li>
-          <li className="nav__items-item">
-            <br />
-          </li>
-        </ul>
-      </section>
-    </nav>
+    <>
+      <nav className={`nav `}>
+        {/*${isOpen ? "hide" : "show"} ${width <= 768 && "nav"*/}
+        {isOpen ? (
+          <MenuIcon onClick={handleToggleBtn} className="menuBtn" />
+        ) : (
+          <CloseIcon onClick={handleToggleBtn} className="closeBtn" />
+        )}
+        <section className="nav__logo">
+          <img src={logoImg} alt="avatar-img" />
+        </section>
+        <section className="nav__links">
+          <ul className={`nav__items ${isOpen ? "hideMenu" : "showMenu"}`}>
+            <li className="nav__items-item">
+              <Link to="/" onClick={handleToggleBtn}>
+                Pocetna
+              </Link>
+            </li>
+            <li className="nav__items-item">
+              <Link to="/o-nama" onClick={handleToggleBtn}>
+                O nama
+              </Link>
+            </li>
+            <li className="nav__items-item">
+              <Link to="/galerija" onClick={handleToggleBtn}>
+                Katalog
+              </Link>
+            </li>
+            <li className="nav__items-item">
+              <Link to="/kontakt" onClick={handleToggleBtn}>
+                Kontakt
+              </Link>
+            </li>
+            <li className="nav__items-item">
+              <br />
+            </li>
+          </ul>
+        </section>
+      </nav>
+    </>
   );
 }
 

@@ -20,7 +20,7 @@ function App() {
         <Navbar />
       </section>
 
-      <section className="wrapper">
+      <section className="wrap">
         <Suspense fallback={<Loader />}>
           <Routes>
             <Route path="/" element={<Home />} />

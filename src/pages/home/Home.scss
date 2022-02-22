@@ -2,7 +2,6 @@
   position: relative;
   max-height: 56.5rem;
   width: 100%;
-  top: 67px;
   overflow: hidden;
   //width: 100%;
   //height: 60px;
@@ -64,7 +63,7 @@
       padding: 2rem;
       text-align: center;
       height: 60%;
-      z-index: 100;
+      //z-index: 100;
       color: #fff;
 
       h1 {
@@ -79,3 +78,20 @@
     }
   }
 }
+
+// mobile
+@media only screen and (max-width: 767px) {
+  .home {
+    top: 0; // for navigation
+
+    & img {
+      width: 100%;
+    }
+  }
+}
+
+//@media only screen and (min-width: 768px) {
+//  .home {
+//    //top: 0; // for navigation
+//  }
+//}
