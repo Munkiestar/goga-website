@@ -17,22 +17,52 @@ body {
 .app {
   font-family: "Lato", sans-serif;
   width: 100%;
-  height: auto;
+  min-height: 100vh;
 }
 
 .container {
   //max-width: 100%;
   //background-color: var(--bcg-color-navbar);
   height: auto;
+
+  //& svg.menu {
+  //  top: 3rem;
+  //  right: 3rem;
+  //  position: relative;
+  //  color: #fff !important;
+  //  width: 2rem;
+  //  height: 2rem;
+  //  background: transparent;
+  //  border: none;
+  //  cursor: pointer;
+  //  padding: 0;
+  //  z-index: 10;
+  //  transform: translateX(0);
+  //}
+
+  @media only screen and (min-width: 768px) {
+    //.show {
+    //  display: none;
+    //}
+    //.hide {
+    //  display: none;
+    //}
+  }
 }
 
-.wrapper {
+.wrap {
   height: 100%;
   min-height: 100%;
   //min-width: 80rem;
   margin: 0 auto 4rem;
   background-color: transparent;
-  position: relative;
+  //position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .wrap {
+    margin: 0 auto;
+  }
 }
 
 .light-mode {
