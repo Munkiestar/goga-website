@@ -1,6 +1,6 @@
 {
-  "name": "untitled1",
-  "homepage": "https://Munkiestar.github.io",
+  "name": "goga-website",
+  "homepage": "https://Munkiestar.github.io/goga-website",
   "version": "0.1.0",
   "private": false,
   "dependencies": {
@@ -23,7 +23,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -b master -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
