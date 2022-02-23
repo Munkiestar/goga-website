@@ -7,10 +7,10 @@ function Products() {
   const [category, setCategory] = useState("sve");
 
   return (
-    <main>
+    <main className="products">
       <h1>Galerija proizvoda</h1>
 
-      <section className="btn__wrapper">
+      <section className="products__btn-wrapper">
         {categories.map((cat) => (
           <button
             className="btn"
@@ -21,7 +21,7 @@ function Products() {
           </button>
         ))}
       </section>
-      <section className="products">
+      <section className="products__cards">
         {products
           .filter((prod) => {
             if (prod.category === category) {
