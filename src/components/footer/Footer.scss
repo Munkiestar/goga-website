@@ -65,3 +65,11 @@
     }
   }
 }
+
+@media only screen and (max-width: 767px) {
+  .footer {
+    &__upper-right {
+      margin: 0.5rem auto;
+    }
+  }
+}

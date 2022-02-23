@@ -12,7 +12,7 @@ function Home() {
           drvenim ukrasima
         </p>
       </div>
-      <img src={home_img} alt="Love by Goga" />s
+      <img src={home_img} alt="Love by Goga" />
     </main>
   );
 }
