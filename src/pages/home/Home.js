@@ -8,7 +8,7 @@ function Home() {
       <div className="home__main-content">
         <h1>Love by Goga</h1>
         <p>
-          Uljepšajte i uveselite vaš dom sa šarenim, unikatnim, ručno oslikanim
+          Uljepšajte i uveselite vaš dom šarenim, unikatnim, ručno oslikanim
           drvenim ukrasima
         </p>
       </div>

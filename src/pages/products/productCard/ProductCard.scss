@@ -1,45 +1,38 @@
 .product {
   width: 70%;
-  height: 800px;
+  min-height: 600px;
   background: #fff;
   padding: 15px;
   border-radius: 6px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  position: relative;
+  //position: relative;
   margin: 20px auto;
 
   & img {
     width: 100%;
-    height: 65%;
+    height: 50%;
     object-fit: cover;
     cursor: pointer;
-    position: absolute;
-    top: 5px;
-    left: 50%;
-    transform: translate(-50%);
-    -webkit-transform: translate(-50%);
-    -ms-transform: translate(-50%);
-    -moz-transform: translate(-50%);
-    -o-transform: translate(-50%);
-    -khtml-transform: translate(-50%);
-    width: 100%;
-    padding: 1rem;
+    //position: absolute;
+    //top: 5px;
+    //left: 50%;
+    //transform: translate(-50%);
+    //-webkit-transform: translate(-50%);
+    //-ms-transform: translate(-50%);
+    //-moz-transform: translate(-50%);
+    //-o-transform: translate(-50%);
+    //-khtml-transform: translate(-50%);
+    //width: 100%;
+    //padding: 1rem;
     border-radius: 20px;
     overflow: hidden;
   }
 
-  &__info > * {
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    width: 100%;
-    margin: auto;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    -khtml-transform: translate(-50%, -50%);
+  &__info {
+    //top: 80%;
+    //left: 50%;
+    //width: 100%;
+    //margin: auto;
 
     h3 {
       text-align: center;
@@ -53,7 +46,8 @@
     }
   }
   &__text {
-    height: 44%;
+    height: 78%;
+    width: 100%;
     white-space: normal;
 
     h4 {
@@ -66,7 +60,7 @@
       margin: 1rem;
 
       p {
-        font-size: 1.3rem;
+        //font-size: 1.3rem;
       }
     }
   }
@@ -75,18 +69,17 @@
     text-decoration: none;
 
     .btn {
-      width: 94.5%;
-      position: relative;
-      bottom: 0;
+      width: 100%;
+      font-size: 1.1rem;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin: 1rem auto;
+      margin: 2rem auto 1rem;
     }
   }
 }
 
-@media only screen and (min-width: 1448px) {
+@media only screen and (min-width: 768px) and(max-width: 1448px) {
   .product {
     width: 45%;
     display: block;
@@ -99,6 +92,35 @@
 
     &__text {
       height: 64%;
+    }
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 767px) {
+  .product {
+    width: 96%;
+    margin: 10px auto;
+    //height: 80vh;
+
+    &__info {
+      img {
+        //max-height: 50%;
+        height: 40vh;
+      }
+    }
+
+    &__text {
+      text-align: justify;
+      text-justify: inter-word;
+      white-space: normal;
+
+      &-desc {
+        font-size: 1.1rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
     }
   }
 }

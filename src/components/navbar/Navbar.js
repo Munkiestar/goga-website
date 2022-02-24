@@ -33,7 +33,7 @@ function Navbar() {
             </li>
             <li className="nav__items-item">
               <Link to="/o-nama" onClick={handleToggleBtn}>
-                O nama
+                O meni
               </Link>
             </li>
             <li className="nav__items-item">

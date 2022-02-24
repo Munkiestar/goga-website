@@ -40,7 +40,8 @@
 }
 
 .light-mode {
-  --bcg-color-navbar: #f06292;
+  //--bcg-color-navbar: #f06292;
+  --bcg-color-navbar: #f88dad;
   --primary-color-link: #000;
 }
 
@@ -53,21 +54,21 @@
 .btn {
   appearance: none;
   backface-visibility: hidden;
-  background-color: #2f80ed;
+  background-color: #8390fa;
   border-radius: 10px;
   border-style: none;
   box-shadow: none;
   box-sizing: border-box;
-  color: #fff;
+  color: #f9e9ec;
   cursor: pointer;
   display: inline-block;
   font-family: Inter, -apple-system, system-ui, "Segoe UI", Helvetica, Arial,
     sans-serif;
   font-size: 1rem;
-  font-weight: 500;
+  font-weight: 600;
   height: 50px;
   letter-spacing: normal;
-  line-height: 1.5;
+  //line-height: 1.5;
   outline: none;
   overflow: hidden;
   padding: 14px 20px;
@@ -84,7 +85,8 @@
   white-space: nowrap;
 
   &:hover {
-    background-color: #1366d6;
+    //background-color: #1366d6;
+    background-color: #7684eb;
     box-shadow: rgba(0, 0, 0, 0.05) 0 5px 30px, rgba(0, 0, 0, 0.05) 0 1px 4px;
     opacity: 1;
     transform: translateY(0);

@@ -1,19 +1,21 @@
 .products {
   max-width: 85rem;
-  margin: 0 auto;
+  margin: 0 auto 0.5rem;
 
   h1 {
     text-align: center;
     margin: 5rem 0;
     font-size: 4rem;
+    text-transform: uppercase;
   }
 
   &__btn-wrapper {
-    width: 70%;
+    min-width: 165px;
+    width: 76%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
-    margin: 1rem auto 4rem;
+    margin: 1rem auto 2rem;
     flex-wrap: wrap;
   }
 
@@ -28,8 +30,12 @@
   }
 }
 
-@media only screen and (max-width: 1448px) {
+@media only screen and (min-width: 768px) and(max-width: 1448px) {
   .products {
+    &__btn-wrapper {
+      width: 72%;
+    }
+
     h1 {
       font-size: 3rem;
     }
@@ -39,13 +45,28 @@
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 360px) and (max-width: 767px) {
   .products {
     h1 {
       text-align: center;
-      margin: 5rem 0;
-      font-size: 2.6rem;
+      margin: 2rem 0;
+      font-size: 1.8rem;
+      text-transform: uppercase;
     }
+
+    &__btn-wrapper {
+      min-width: 165px;
+      width: 100%;
+      padding: 0 2rem;
+
+      button {
+        padding: 4px 10px;
+        font-weight: 400;
+        height: 40px;
+        margin-top: 0.4rem;
+      }
+    }
+
     &__upper-right {
       margin: 0.5rem auto;
     }
