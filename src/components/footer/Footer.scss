@@ -39,6 +39,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 1.1rem;
 
     .MuiSvgIcon-root {
       color: #e25555;
@@ -66,10 +67,48 @@
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (min-width: 410px) and (max-width: 767px) {
   .footer {
+    &__upper-left {
+      font-size: 1.1rem;
+      margin-right: 1.3rem;
+    }
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 767px) {
+  .footer {
+    &__upper-left {
+      font-size: 0.8rem;
+    }
+
     &__upper-right {
       margin: 0.5rem auto;
+
+      .MuiSvgIcon-root {
+        margin: 0 0.3rem;
+
+        &.facebook {
+          font-size: 1.4rem !important;
+        }
+
+        &.instagram {
+          font-size: 1.4rem !important;
+          margin-left: 0.5rem;
+        }
+
+        &.email {
+          font-size: 1.4rem !important;
+          margin-left: 0.5rem;
+        }
+      }
+      img {
+        font-size: 1rem !important;
+      }
+    }
+    &__bottom {
+      font-size: 1rem;
+      margin: auto;
     }
   }
 }

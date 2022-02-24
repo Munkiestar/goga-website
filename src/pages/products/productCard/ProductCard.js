@@ -37,20 +37,17 @@ function ProductCard({ product }) {
           ref={refBtn}
           title={title}
         />
-        <div className="product__text">
-          <Link to="/kontakt" onClick={ScrollToTop}>
-            <button className="btn">Posalji upit</button>
-          </Link>
-          <div
-            className="product__text-desc"
-            dangerouslySetInnerHTML={{ __html: description }}
-          />
-          <div dangerouslySetInnerHTML={{ __html: size }} />
-          {/*<h3>{description}</h3>*/}
-          {/*<h4>{colors}</h4>*/}
-          {/*<p>{size}</p>*/}
-        </div>
       </div>
+      <div className="product__text">
+        <div
+          className="product__text-desc"
+          dangerouslySetInnerHTML={{ __html: description }}
+        />
+        <div dangerouslySetInnerHTML={{ __html: size }} />
+      </div>
+      <Link to="/kontakt" onClick={ScrollToTop}>
+        <button className="btn">Posalji upit</button>
+      </Link>
       {isOpen && (
         <div className="">
           <Modal
