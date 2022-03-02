@@ -1,9 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./Footer.scss";
 
-import FacebookIcon from "@material-ui/icons/Facebook";
-import InstagramIcon from "@material-ui/icons/Instagram";
 import CopyrightIcon from "@material-ui/icons/Copyright";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import { getYear } from "../../helpers";

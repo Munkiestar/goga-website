@@ -5,7 +5,7 @@ import Modal from "../../../components/modal/Modal";
 import { ScrollToTop } from "../../../helpers";
 
 function ProductCard({ product }) {
-  const { image, title, description, colors, size } = product;
+  const { image, title, description, size } = product;
   const [isOpen, setIsOpen] = useState(false);
   const refBtn = useRef();
 

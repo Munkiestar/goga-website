@@ -4,7 +4,7 @@ import { products, categories } from "../../seeds/products";
 import ProductCard from "./productCard/ProductCard";
 
 function Products() {
-  const [category, setCategory] = useState("sve");
+  const [category, setCategory] = useState("");
 
   return (
     <main className="products">
@@ -23,8 +23,9 @@ function Products() {
       </section>
       <section className="products__cards">
         {products
+          // eslint-disable-next-line array-callback-return
           .filter((prod) => {
-            if (prod.category === category) {
+            if (prod.category) {
               return prod;
             } else if (category === "sve") {
               return prod;
