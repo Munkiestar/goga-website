@@ -9,7 +9,7 @@ function ContactForm() {
     message: "",
     subject: "Love by Goga - narudzba",
     replyTo: "@",
-    accessKey: "c7215b8d-4a7c-4d12-9908-c348c23aed1e",
+    accessKey: "7b71d672-5e11-44ec-a1c8-d11d88ff36be",
   });
 
   const [response, setResponse] = useState({

@@ -1,31 +1,31 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./ProductCard.scss";
 import Modal from "../../../components/modal/Modal";
 import { ScrollToTop } from "../../../helpers";
 
 function ProductCard({ product }) {
-  const { image, title, description, colors, size } = product;
+  const { image, title, description, size } = product;
   const [isOpen, setIsOpen] = useState(false);
   const refBtn = useRef();
 
   const handleImageOpen = () => {
     setIsOpen(!isOpen);
   };
+  //
+  // useEffect(() => {
+  //   const closeModal = (e) => {
+  // console.log("path: ", e.path);
+  // console.log("target: ", e.target);
+  // console.log("refBtn.current: ", refBtn.current);
+  // if (e.path[0] !== e.target) setIsOpen(true);
+  // if (e.path[0] === e.target) setIsOpen(false);
+  // };
 
-  useEffect(() => {
-    const closeModal = (e) => {
-      // console.log("path: ", e.path);
-      // console.log("target: ", e.target);
-      // console.log("refBtn.current: ", refBtn.current);
-      if (e.path[0] !== e.target) setIsOpen(true);
-      if (e.path[0] === e.target) setIsOpen(false);
-    };
-
-    document.body.addEventListener("click", closeModal, true);
-
-    return () => document.body.removeEventListener("click", closeModal, true);
-  }, [refBtn]);
+  //   document.body.addEventListener("click", closeModal, true);
+  //
+  //   return () => document.body.removeEventListener("click", closeModal, true);
+  // }, [refBtn]);
 
   return (
     <section className="product">
