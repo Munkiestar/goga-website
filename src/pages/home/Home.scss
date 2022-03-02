@@ -1,7 +1,7 @@
 .home {
   position: relative;
   height: 100%;
-  min-height: 75vh;
+  min-height: 82vh;
   width: 100%;
   overflow: hidden;
   display: flex;
@@ -33,11 +33,13 @@
     h1 {
       font-size: 6rem;
       letter-spacing: 2px;
+      word-spacing: 20px;
     }
 
     p {
       margin-top: 4rem;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
+      word-spacing: 6px;
     }
   }
 }
@@ -45,32 +47,22 @@
 // mobile
 @media only screen and (min-width: 360px) and (max-width: 767px) {
   .home {
-    //height: 100vh;
-    //min-height: 75vh;
-
     img {
       width: 100%;
       height: 100%;
-      min-height: 75vh;
-
-      //object-fit: contain;
+      min-height: 82vh;
     }
 
     &__main-content {
       h1 {
         font-size: 2.8rem;
+        word-spacing: 10px;
       }
 
       p {
-        //margin-top: 4rem;
-        //font-size: 1.2rem;
+        font-size: 1.2rem;
+        //word-spacing: 6px;
       }
     }
   }
 }
-
-//@media only screen and (min-width: 768px) {
-//  .home {
-//    //top: 0; // for navigation
-//  }
-//}

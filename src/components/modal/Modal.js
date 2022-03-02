@@ -9,8 +9,10 @@ function Modal({ src, alt, open, onClick }) {
 
   return createPortal(
     <div className="modal">
-      <CloseRoundedIcon className="modal__btn" onClick={onClick} />
-      <img src={src} alt={alt} />
+      <div className="modal__container">
+        <img src={src} alt={alt} />
+        <CloseRoundedIcon className="modal__btn" onClick={onClick} />
+      </div>
     </div>,
     document.getElementById("modal-portal")
   );

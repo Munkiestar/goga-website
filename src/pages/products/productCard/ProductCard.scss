@@ -1,11 +1,10 @@
 .product {
-  width: 70%;
-  min-height: 600px;
+  width: 30%;
+
   background: #fff;
   padding: 15px;
   border-radius: 6px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-  //position: relative;
   margin: 20px auto;
 
   & img {
@@ -13,34 +12,17 @@
     height: 50%;
     object-fit: cover;
     cursor: pointer;
-    //position: absolute;
-    //top: 5px;
-    //left: 50%;
-    //transform: translate(-50%);
-    //-webkit-transform: translate(-50%);
-    //-ms-transform: translate(-50%);
-    //-moz-transform: translate(-50%);
-    //-o-transform: translate(-50%);
-    //-khtml-transform: translate(-50%);
-    //width: 100%;
-    //padding: 1rem;
     border-radius: 20px;
     overflow: hidden;
   }
 
   &__info {
-    //top: 80%;
-    //left: 50%;
-    //width: 100%;
-    //margin: auto;
-
     h3 {
       text-align: center;
       width: 90%;
       font-size: 20px;
       font-weight: bold;
       margin: 1rem auto;
-      //overflow: hidden;
       white-space: normal;
       text-overflow: ellipsis;
     }
@@ -57,11 +39,7 @@
     }
 
     > div {
-      margin: 1rem;
-
-      p {
-        //font-size: 1.3rem;
-      }
+      margin: 1rem auto;
     }
   }
 
@@ -79,11 +57,11 @@
   }
 }
 
-@media only screen and (min-width: 768px) and(max-width: 1448px) {
+@media only screen and (min-width: 768px) and(max-width: 1200px) {
   .product {
     width: 45%;
-    display: block;
-    height: 800px;
+    //display: block;
+    min-height: 600px;
 
     img {
       width: 100%;
@@ -100,11 +78,9 @@
   .product {
     width: 96%;
     margin: 10px auto;
-    //height: 80vh;
 
     &__info {
       img {
-        //max-height: 50%;
         height: 40vh;
       }
     }

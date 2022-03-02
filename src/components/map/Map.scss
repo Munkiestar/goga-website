@@ -1,22 +1,53 @@
 .map {
-  margin-top: 3rem;
+  width: 100%;
+  margin-top: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  h1 {
+  &__title {
     font-size: 3rem;
     text-align: center;
-    margin: 5rem auto;
+    margin: 3rem auto;
+    word-spacing: 10px;
+  }
+
+  iframe {
+    width: 600px;
+    height: 450px;
   }
 }
 
 .info {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   font-family: inherit;
+  margin: 1.5rem;
   width: 500px;
   strong {
     font-weight: 600;
     margin-bottom: 0.9375rem;
+  }
+}
+
+// mobile
+@media only screen and (min-width: 360px) and (max-width: 767px) {
+  .map {
+    margin: 1rem auto 1rem;
+
+    &__title {
+      font-size: 1.8rem;
+      word-spacing: 10px;
+      text-align: center;
+      margin: 1rem auto 2rem;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+    }
   }
 }
