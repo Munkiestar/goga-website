@@ -46,7 +46,7 @@ function ProductCard({ product }) {
         <div dangerouslySetInnerHTML={{ __html: size }} />
       </div>
       <Link to="/kontakt" onClick={ScrollToTop}>
-        <button className="btn">Posalji upit</button>
+        <button className="btn">Pošalji upit</button>
       </Link>
       {isOpen && (
         <div className="">
