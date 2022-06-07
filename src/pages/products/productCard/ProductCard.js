@@ -2,10 +2,10 @@ import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./ProductCard.scss";
 import Modal from "../../../components/modal/Modal";
-import { ScrollToTop } from "../../../helpers";
 
 function ProductCard({ product }) {
   const { image, title, description, size } = product;
+
   const [isOpen, setIsOpen] = useState(false);
   const refBtn = useRef();
 
@@ -31,7 +31,7 @@ function ProductCard({ product }) {
     <section className="product">
       <div className="product__info">
         <img
-          src={image}
+          src={image.fields.file.url}
           alt={title}
           onClick={handleImageOpen}
           ref={refBtn}
@@ -41,17 +41,21 @@ function ProductCard({ product }) {
       <div className="product__text">
         <div
           className="product__text-desc"
-          dangerouslySetInnerHTML={{ __html: description }}
+          dangerouslySetInnerHTML={{
+            __html: description.content[0].content[0].value,
+          }}
         />
-        <div dangerouslySetInnerHTML={{ __html: size }} />
+        <div
+          dangerouslySetInnerHTML={{ __html: size.content[0].content[0].value }}
+        />
       </div>
-      <Link to="/kontakt" onClick={ScrollToTop}>
+      <Link to="/kontakt">
         <button className="btn">Pošalji upit</button>
       </Link>
       {isOpen && (
         <div className="">
           <Modal
-            src={image}
+            src={image.fields.file.url}
             alt={title}
             open={isOpen}
             onClick={() => handleImageOpen()}
