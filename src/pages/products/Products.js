@@ -53,6 +53,7 @@ function Products() {
       <section className="products__cards">
         {products &&
           products
+            // eslint-disable-next-line array-callback-return
             .filter((prod) => {
               if (prod.category === category) {
                 return prod;
