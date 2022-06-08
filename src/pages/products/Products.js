@@ -35,6 +35,8 @@ function Products() {
     }
   };
 
+  console.log("products", products);
+
   return (
     <main className="products">
       <h1>Galerija proizvoda</h1>
