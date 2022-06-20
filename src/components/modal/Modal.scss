@@ -15,12 +15,10 @@
   cursor: pointer;
 
   &__btn {
-    position: absolute;
-    top: -4rem;
-    right: 2rem;
-    //top: -5rem;
-    //right: -2rem;
-    font-size: 3rem !important;
+    position: relative;
+    top: 1.5rem;
+    right: 4rem;
+    font-size: 2rem !important;
     color: #fff;
     cursor: pointer;
     z-index: 100;
@@ -33,11 +31,15 @@
     justify-content: center;
 
     & img {
-      width: 96%;
+      width: 80%;
       height: 90%;
       border-radius: 4px;
       object-fit: contain;
       z-index: 90;
+
+      &__btn {
+        font-size: 1.6rem !important;
+      }
     }
   }
 }
@@ -45,16 +47,12 @@
 @media only screen and (min-width: 360px) and (max-width: 767px) {
   .modal {
     max-width: 80rem;
-
     padding: 0;
 
     &__btn {
-      //top: -4rem;
-      //right: 2rem;
-      top: -5rem;
-      right: 1rem;
+      top: 1rem;
+      right: 3.2rem;
+      font-size: 1.6rem !important;
     }
   }
 }
-
-// 360-462  top12

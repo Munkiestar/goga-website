@@ -1,0 +1,66 @@
+.slider {
+  overflow-x: hidden;
+  background-size: cover;
+  position: relative;
+}
+
+.slider__wrap {
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.slick-slide img {
+  height: 50vh;
+  object-fit: cover;
+  width: 100%;
+}
+
+ul.slick-dots {
+  z-index: 100;
+  bottom: 1.4rem;
+}
+
+.slick-dots li.slick-active button:before {
+  z-index: 100;
+  //font-size: 8px;
+  color: #fff !important;
+}
+
+.slick-next::before {
+  z-index: 100;
+  position: relative;
+  content: "→";
+  color: #fff;
+  left: -4rem;
+  font-size: 1.6rem;
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.slick-prev::before {
+  left: 4rem;
+  position: relative;
+  content: "←";
+  color: #fff;
+  z-index: 100;
+  font-size: 1.6rem;
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.slick-prev {
+  left: 2rem;
+  content: "←";
+  color: #fff;
+  z-index: 100;
+}
