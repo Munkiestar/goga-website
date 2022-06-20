@@ -1,12 +1,11 @@
 import React from "react";
-// import "./Slider.scss";
+import "./Slider.scss";
 import Slider from "react-slick";
-import slika from "../../assets/slika-5.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../pages/products/Products.scss";
 
-function ImageSlider({ images }) {
+function ImageSlider({ images, handleImageOpen }) {
   const settings = {
     dots: true,
     infinite: true,
@@ -14,24 +13,22 @@ function ImageSlider({ images }) {
     slidesToShow: 1,
     slidesToScroll: 1,
   };
+
   return (
     <Slider {...settings}>
       {images &&
         images.map((image) => (
-          <div className="product">
-            <section className="">
-              <img
-                className="product__info"
-                style={{ width: "50%", height: "50%" }}
-                src={image.fields.file.url}
-                // alt={title}
-                // onClick={handleImageOpen}
-                // ref={refBtn}
-                // title={title}
-                alt=""
-              />
-            </section>
-          </div>
+          <img
+            key={image.sys.id}
+            // className=""
+            style={{ width: "50%", height: "50%" }}
+            src={image.fields.file.url}
+            // alt={title}
+            onClick={handleImageOpen}
+            // ref={refBtn}
+            // title={title}
+            alt=""
+          />
         ))}
     </Slider>
   );

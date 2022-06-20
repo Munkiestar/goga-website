@@ -2,7 +2,6 @@ import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./ProductCard.scss";
 import Modal from "../../../components/modal/Modal";
-// import { Carousel } from "react-responsive-carousel";
 
 import ImageSlider from "../../../components/shared/Slider";
 
@@ -33,7 +32,6 @@ function ProductCard({ product }) {
   // console.log("images", images.fields.file);
   const settings = {
     dots: true,
-    // infinite: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
@@ -42,17 +40,15 @@ function ProductCard({ product }) {
   if (image) {
     return (
       <section className="product">
-        {image && (
-          <div className="product__info">
-            <img
-              src={image.fields.file.url}
-              alt={title}
-              onClick={handleImageOpen}
-              ref={refBtn}
-              title={title}
-            />
-          </div>
-        )}
+        <div className="product__info">
+          <img
+            src={image.fields.file.url}
+            alt={title}
+            onClick={handleImageOpen}
+            ref={refBtn}
+            title={title}
+          />
+        </div>
         <div className="product__text">
           <div
             className="product__text-desc"
@@ -70,23 +66,27 @@ function ProductCard({ product }) {
           <button className="btn">Pošalji upit</button>
         </Link>
         {isOpen && (
-          <div className="">
+          <>
             <Modal
               src={image.fields.file.url}
               alt={title}
               open={isOpen}
               onClick={() => handleImageOpen()}
             />
-          </div>
+          </>
         )}
       </section>
     );
   }
 
-  if (images) {
+  if (images && images.length) {
     return (
       <section className="product">
-        <ImageSlider images={images} />
+        <ImageSlider
+          images={images}
+          {...settings}
+          handleImageOpen={handleImageOpen}
+        />
         <div className="product__text">
           <div
             className="product__text-desc"
@@ -103,6 +103,7 @@ function ProductCard({ product }) {
         <Link to="/kontakt">
           <button className="btn">Pošalji upit</button>
         </Link>
+        {/*  TODO - add modal for slider  */}
       </section>
     );
   }
