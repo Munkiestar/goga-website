@@ -17,16 +17,13 @@ function ImageSlider({ images, handleImageOpen }) {
   return (
     <Slider {...settings}>
       {images &&
+        images.length &&
         images.map((image) => (
           <img
             key={image.sys.id}
-            // className=""
             style={{ width: "50%", height: "50%" }}
             src={image.fields.file.url}
-            // alt={title}
             onClick={handleImageOpen}
-            // ref={refBtn}
-            // title={title}
             alt=""
           />
         ))}

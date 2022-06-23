@@ -29,7 +29,6 @@ function ProductCard({ product }) {
   //   return () => document.body.removeEventListener("click", closeModal, true);
   // }, [refBtn]);
 
-  // console.log("images", images.fields.file);
   const settings = {
     dots: true,
     speed: 500,
@@ -37,6 +36,7 @@ function ProductCard({ product }) {
     slidesToScroll: 1,
   };
 
+  // show products with one image
   if (image) {
     return (
       <section className="product">
@@ -67,18 +67,22 @@ function ProductCard({ product }) {
         </Link>
         {isOpen && (
           <>
-            <Modal
-              src={image.fields.file.url}
-              alt={title}
-              open={isOpen}
-              onClick={() => handleImageOpen()}
-            />
+            <Modal open={isOpen} onClick={() => handleImageOpen()}>
+              <img
+                src={image.fields.file.url}
+                alt={title}
+                onClick={handleImageOpen}
+                ref={refBtn}
+                title={title}
+              />
+            </Modal>
           </>
         )}
       </section>
     );
   }
 
+  // show products with many images
   if (images && images.length) {
     return (
       <section className="product">
@@ -103,7 +107,19 @@ function ProductCard({ product }) {
         <Link to="/kontakt">
           <button className="btn">Pošalji upit</button>
         </Link>
-        {/*  TODO - add modal for slider  */}
+        {isOpen && (
+          <>
+            <Modal
+              alt={title}
+              open={isOpen}
+              onClick={() => handleImageOpen()}
+              imagesLengthCheck={images.length > 0}
+            >
+              {/*  TODO - add media querys for modal-slider  */}
+              <ImageSlider images={images} {...settings} />
+            </Modal>
+          </>
+        )}
       </section>
     );
   }
