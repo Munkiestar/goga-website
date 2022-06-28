@@ -12,7 +12,7 @@ function Modal({ open, onClick, children, imagesLengthCheck }) {
 
       // div[2].classList.add("dalibor");
     }
-  }, []);
+  }, [imagesLengthCheck]);
 
   if (!open) return null;
 
