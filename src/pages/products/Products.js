@@ -27,17 +27,22 @@ function Products() {
 
       const entries = await client.getEntries("products");
       const sanitizedEntries = entries.items.map((entry) => {
+        console.log("ENTRY:", entry);
         return {
-          ...entry.fields,
+          ...entry?.fields,
           id: uuid(),
         };
       });
+      console.log("sanitizedEntries:", sanitizedEntries);
       setProducts(sanitizedEntries);
+      // setCategory(sanitizedEntries.category?.name);
       setIsLoading(false);
     } catch (err) {
       console.log("Error: ", err);
     }
   };
+
+  console.log("categories", category);
   /* TODO: fetch categories from Contentful for dynamic input */
   // const fetchCategories = async () => {
   //   try {
@@ -50,7 +55,7 @@ function Products() {
   //     const entries = await client.getEntries("categories");
   //     const sanitizedEntries = entries.items.map((entry, ind) => {
   //       return {
-  //         ...entry[ind].fields,
+  //         ...entry.fields.category,
   //       };
   //     });
   //     console.log("sanitizedEntries: ", sanitizedEntries);
@@ -60,7 +65,7 @@ function Products() {
   //     console.log("Error: ", err);
   //   }
   // };
-
+  //
   // console.log("categories", category);
 
   return (

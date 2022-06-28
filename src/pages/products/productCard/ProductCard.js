@@ -44,9 +44,9 @@ function ProductCard({ product }) {
           <img
             src={image.fields.file.url}
             alt={title}
-            onClick={handleImageOpen}
             ref={refBtn}
             title={title}
+            onClick={handleImageOpen}
           />
         </div>
         <div className="product__text">
@@ -67,11 +67,10 @@ function ProductCard({ product }) {
         </Link>
         {isOpen && (
           <>
-            <Modal open={isOpen} onClick={() => handleImageOpen()}>
+            <Modal open={isOpen} onClick={handleImageOpen}>
               <img
                 src={image.fields.file.url}
                 alt={title}
-                onClick={handleImageOpen}
                 ref={refBtn}
                 title={title}
               />
@@ -112,8 +111,8 @@ function ProductCard({ product }) {
             <Modal
               alt={title}
               open={isOpen}
-              onClick={() => handleImageOpen()}
               imagesLengthCheck={images.length > 0}
+              onClick={handleImageOpen}
             >
               {/*  TODO - add media querys for modal-slider  */}
               <ImageSlider images={images} {...settings} />

@@ -19,12 +19,13 @@ function ImageSlider({ images, handleImageOpen }) {
       {images &&
         images.length &&
         images.map((image) => (
+          // eslint-disable-next-line jsx-a11y/img-redundant-alt
           <img
-            key={image.sys.id}
+            key={image?.sys.id}
             style={{ width: "50%", height: "50%" }}
-            src={image.fields.file.url}
-            onClick={handleImageOpen}
-            alt=""
+            src={image?.fields.file.url}
+            onDoubleClick={handleImageOpen}
+            alt={image?.fields.title}
           />
         ))}
     </Slider>
