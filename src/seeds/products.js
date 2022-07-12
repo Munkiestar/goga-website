@@ -1,26 +1,26 @@
-export const categories = [
-  {
-    name: "sve",
-    value: "Svi Proizvodi",
-  },
-  {
-    name: "oslikana_daskica",
-    value: "Oslikane Daskice",
-  },
-  {
-    name: "rocking_rainbow",
-    value: "Rocking Rainbow",
-  },
-  {
-    name: "sklopiva_penjalica",
-    value: "Sklopive Penjalice",
-  },
-  {
-    name: "drveni_visomjer",
-    value: "Drveni Visomjeri",
-  },
-];
-
+//
+// export const categories = [
+//   {
+//     name: "sve",
+//     value: "Svi Proizvodi",
+//   },
+//   {
+//     name: "oslikana_daskica",
+//     value: "Oslikane Daskice",
+//   },
+//   {
+//     name: "rocking_rainbow",
+//     value: "Rocking Rainbow",
+//   },
+//   {
+//     name: "sklopiva_penjalica",
+//     value: "Sklopive Penjalice",
+//   },
+//   {
+//     name: "drveni_visomjer",
+//     value: "Drveni Visomjeri",
+//   },
+// ];
 /*
         1. Oslikane daskice
         2. Likovi
