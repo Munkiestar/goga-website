@@ -15,14 +15,17 @@ function ImageSlider({ images, handleImageOpen }) {
   };
 
   return (
-    <Slider {...settings}>
+    <Slider
+      {...settings}
+      style={{ width: "100%", height: " 90%", objectFit: "contain" }}
+    >
       {images &&
         images.length &&
         images.map((image) => (
           // eslint-disable-next-line jsx-a11y/img-redundant-alt
           <img
             key={image?.sys.id}
-            style={{ width: "50%", height: "50%" }}
+            style={{ width: "100%", height: "100%", objectFit: "contain" }}
             src={image?.fields.file.url}
             onDoubleClick={handleImageOpen}
             alt={image?.fields.title}
