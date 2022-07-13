@@ -8,6 +8,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - React Router Dom
 - Sass
 - Responsive Design
+- Contentful CMS [link](https://app.contentful.com)
+- react-slick/slick-carousel [link](https://www.npmjs.com/package/react-slick)
+- dotenv
 
 
 <hr style="border: 1px solid gray" /> 
